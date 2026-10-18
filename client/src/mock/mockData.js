@@ -1,4 +1,5 @@
 // Mock Database Data for Live Demo Preview (GitHub Pages / Standalone Client)
+// Semua data menggunakan data anonim/fiktif tanpa referensi ke entitas perbankan nyata
 
 export const MOCK_GROUPS = [
     { id: 1, name: 'Admin' },
@@ -19,7 +20,7 @@ export const MOCK_USERS = [
         role_name: 'Admin',
         jabatan: 'Administrator System',
         nohp: '081234567890',
-        email: 'admin@bni.co.id',
+        email: 'admin@demo-portal.co.id',
         lastchange: '2026-01-01',
         must_change_password: 0
     },
@@ -33,7 +34,7 @@ export const MOCK_USERS = [
         role_name: 'MGR',
         jabatan: 'MGR T&R',
         nohp: '081234567891',
-        email: 'mgr@bni.co.id',
+        email: 'mgr@demo-portal.co.id',
         lastchange: '2026-01-01',
         must_change_password: 0
     },
@@ -47,7 +48,7 @@ export const MOCK_USERS = [
         role_name: 'SPV',
         jabatan: 'SPV T&R',
         nohp: '081234567892',
-        email: 'spv@bni.co.id',
+        email: 'spv@demo-portal.co.id',
         lastchange: '2026-01-01',
         must_change_password: 0
     },
@@ -61,7 +62,7 @@ export const MOCK_USERS = [
         role_name: 'TL',
         jabatan: 'TL T&R',
         nohp: '081234567893',
-        email: 'tl@bni.co.id',
+        email: 'tl@demo-portal.co.id',
         lastchange: '2026-01-01',
         must_change_password: 0
     },
@@ -75,7 +76,7 @@ export const MOCK_USERS = [
         role_name: 'User',
         jabatan: 'CXO T&R',
         nohp: '081234567894',
-        email: 'user@bni.co.id',
+        email: 'user@demo-portal.co.id',
         lastchange: '2026-01-01',
         must_change_password: 0
     }
@@ -93,13 +94,13 @@ export const MOCK_CUSTTYPES = [
     { id: 1, name_typecust: 'Perorangan', cust_reff: 'input:Nomor Rekening' },
     { id: 2, name_typecust: 'Korporasi / PT', cust_reff: 'input:NPWP Perusahaan' },
     { id: 3, name_typecust: 'Bank Koresponden', cust_reff: 'ref_bic' },
-    { id: 4, name_typecust: 'Kantor Cabang BNI', cust_reff: 'ref_branch' },
+    { id: 4, name_typecust: 'Kantor Cabang Bank', cust_reff: 'ref_branch' },
     { id: 5, name_typecust: 'Paying Agent Luar Negeri', cust_reff: 'ref_pagent' },
     { id: 6, name_typecust: 'Lainnya', cust_reff: 'ref_other' }
 ];
 
 export const MOCK_PRODUCTS = [
-    { id: 1, name: 'BNI Remittance (Smart Transfer)', seq: 1, parent: 0, listselection: '', lv: 0, urutmenu: 1, aktif: 'Y', ket: 'Layanan Pengiriman Uang Luar Negeri' },
+    { id: 1, name: 'Global Remittance (Smart Transfer)', seq: 1, parent: 0, listselection: '', lv: 0, urutmenu: 1, aktif: 'Y', ket: 'Layanan Pengiriman Uang Luar Negeri' },
     { id: 2, name: 'Trade Finance - Letter of Credit (LC)', seq: 2, parent: 0, listselection: '', lv: 0, urutmenu: 2, aktif: 'Y', ket: 'Penerbitan & Konfirmasi LC' },
     { id: 3, name: 'Bank Garansi (BG)', seq: 3, parent: 0, listselection: '', lv: 0, urutmenu: 3, aktif: 'Y', ket: 'Jaminan Pembayaran Bank Garansi' },
     { id: 4, name: 'SKBDN (Surat Kredit Berdokumen Dalam Negeri)', seq: 4, parent: 0, listselection: '', lv: 0, urutmenu: 4, aktif: 'Y', ket: 'Perdagangan Dalam Negeri' }
@@ -132,7 +133,7 @@ export const MOCK_BRANCHES = [
 ];
 
 export const MOCK_PAGENTS = [
-    { id: 1, name_pagent: 'Western Union Indonesia' },
+    { id: 1, name_pagent: 'Western Union Global' },
     { id: 2, name_pagent: 'MoneyGram International' },
     { id: 3, name_pagent: 'Ria Financial Services' },
     { id: 4, name_pagent: 'Transfast Global' },
@@ -140,11 +141,11 @@ export const MOCK_PAGENTS = [
 ];
 
 export const MOCK_BNIR_REPS = [
-    { id: 1, name_bnir_rep: 'BNI Seoul Representative Office', area: 'South Korea' },
-    { id: 2, name_bnir_rep: 'BNI Tokyo Branch & Remittance Desk', area: 'Japan' },
-    { id: 3, name_bnir_rep: 'BNI London Branch', area: 'Europe' },
-    { id: 4, name_bnir_rep: 'BNI Singapore Branch', area: 'Southeast Asia' },
-    { id: 5, name_bnir_rep: 'BNI New York Agency', area: 'Americas' }
+    { id: 1, name_bnir_rep: 'Seoul Representative Office', area: 'South Korea' },
+    { id: 2, name_bnir_rep: 'Tokyo Branch & Remittance Desk', area: 'Japan' },
+    { id: 3, name_bnir_rep: 'London Branch', area: 'Europe' },
+    { id: 4, name_bnir_rep: 'Singapore Branch', area: 'Southeast Asia' },
+    { id: 5, name_bnir_rep: 'New York Agency', area: 'Americas' }
 ];
 
 export const MOCK_COMPLAINTS = [
@@ -165,14 +166,14 @@ export const MOCK_COMPLAINTS = [
         idbranch: 1,
         branch_name: 'KC Jakarta Kota',
         idpagent: 1,
-        pagent_name: 'Western Union Indonesia',
+        pagent_name: 'Western Union Global',
         idbnir_rep: 4,
-        bnir_rep_name: 'BNI Singapore Branch',
+        bnir_rep_name: 'Singapore Branch',
         idproduct: 1,
-        product_name: 'BNI Remittance (Smart Transfer)',
+        product_name: 'Global Remittance (Smart Transfer)',
         idsubject: 1,
         subject_name: 'Status Kiriman Belum Masuk Rekening',
-        cmessage: 'Nasabah menanyakan kiriman uang dari Citibank New York sebesar USD 1,500 tertanggal 15 Oktober 2026 belum masuk rekening BNI IDR.',
+        cmessage: 'Nasabah menanyakan kiriman uang dari Citibank New York sebesar USD 1,500 tertanggal 15 Oktober 2026 belum masuk rekening tujuan.',
         cmessage_re: 'Sudah dilakukan penelusuran MT103. Dana telah dikreditkan ke rekening tujuan pada 18 Oktober 2026 pukul 11:30 WIB.',
         notes: 'Tiket selesai dikonfirmasi ke nasabah via email.',
         idstatus: 2,
@@ -227,13 +228,13 @@ export const MOCK_COMPLAINTS = [
     {
         id: 3,
         noticket: 'T-18102026-103',
-        noreff: 'BG-BNI-2026-045',
+        noreff: 'BG-DOC-2026-045',
         idchannel: 3,
         name_channel: 'Surat Resmi',
         idchannel_note: 'No Surat: 045/DIR-KONS/X/2026',
         idtypecust: 2,
         name_typecust: 'Korporasi / PT',
-        cust_name: 'PT Wijaya Karya Konstruksi',
+        cust_name: 'PT Nusantara Jaya Konstruksi',
         cust_lok: 'Bandung',
         cust_note: '02.456.789.1-013.000',
         idbic: null,
@@ -249,7 +250,7 @@ export const MOCK_COMPLAINTS = [
         idsubject: 6,
         subject_name: 'Verifikasi Keabsahan Warkat Bank Garansi',
         cmessage: 'Verifikasi keabsahan warkat Bank Garansi jaminan pelaksanaan proyek senilai Rp 5.000.000.000,-.',
-        cmessage_re: 'Warkat Bank Garansi dinyatakan sah, tercatat resmi dalam sistem core banking BNI.',
+        cmessage_re: 'Warkat Bank Garansi dinyatakan sah, tercatat resmi dalam sistem core banking.',
         notes: 'Surat konfirmasi balasan telah dikirimkan ke kontraktor.',
         idstatus: 2,
         status_name: 'Close',
@@ -281,9 +282,9 @@ export const MOCK_COMPLAINTS = [
         idpagent: null,
         pagent_name: '-',
         idbnir_rep: 1,
-        bnir_rep_name: 'BNI Seoul Representative Office',
+        bnir_rep_name: 'Seoul Representative Office',
         idproduct: 1,
-        product_name: 'BNI Remittance (Smart Transfer)',
+        product_name: 'Global Remittance (Smart Transfer)',
         idsubject: 2,
         subject_name: 'Koreksi Data Penerima / Nama / Rekening',
         cmessage: 'Pengirim dari Korea Selatan mengajukan koreksi nama penerima di Medan karena terdapat salah ketik 1 huruf.',

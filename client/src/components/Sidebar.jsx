@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
     LayoutDashboard,
     MessageSquare,
@@ -21,6 +21,7 @@ import {
 import logoTrade from '../assets/trade_remittance_new.png';
 
 const Sidebar = ({ user }) => {
+    const navigate = useNavigate();
     const [openMenus, setOpenMenus] = useState({
         ciu: true,
         master: false,
@@ -57,7 +58,7 @@ const Sidebar = ({ user }) => {
     };
     const masterLinks = [
         { to: "/master/bic", label: "BIC" },
-        { to: "/master/bnirr", label: "BNI RR" },
+        { to: "/master/bnirr", label: "Representative (RR)" },
         { to: "/master/branch", label: "Branch" },
         { to: "/master/channel", label: "Channel Type" },
         { to: "/master/customertype", label: "Customer Type" },
@@ -200,7 +201,7 @@ const Sidebar = ({ user }) => {
                         <div>{user.jabatan}</div>
                     </div>
                 )}
-                <div className="nav-item" onClick={() => { localStorage.removeItem('user'); window.location.href = '/login'; }} style={{ justifyContent: 'center', width: '100%' }}>
+                <div className="nav-item" onClick={() => { localStorage.removeItem('user'); localStorage.removeItem('loginTime'); navigate('/login'); }} style={{ justifyContent: 'center', width: '100%', cursor: 'pointer' }}>
                     <LogOut size={18} style={{ marginRight: '0.75rem' }} />
                     <span>Logout</span>
                 </div>

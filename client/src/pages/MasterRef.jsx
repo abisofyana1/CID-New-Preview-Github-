@@ -16,7 +16,7 @@ import Pagination from '../components/Pagination';
 // Configuration for each master type to map fields dynamically
 const MASTER_CONFIG = {
     bic: { title: 'Bank Identifier Codes (BIC)', fields: ['name_bic', 'country_bic', 'scode_bic', 'aktif'] },
-    bnirr: { title: 'BNI RR', fields: ['name_bnir_rep', 'area'] },
+    bnirr: { title: 'Remittance Representative (RR)', fields: ['name_bnir_rep', 'area'] },
     branch: { title: 'Branches', fields: ['sandi_brc', 'kode_brc', 'name_brc', 'wil_brc', 'eisname_brc'] },
     channel: { title: 'Channel Types', fields: ['name_channel'] },
     customertype: { title: 'Customer Types', fields: ['name_typecust', 'cust_reff'] },

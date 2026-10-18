@@ -444,7 +444,7 @@ const ComplaintList = () => {
         const headers = [
             'No', 'No Ticket', 'Tgl Open', 'Open By', 'Tgl Close', 'Close By', 'Close Update by', 'Duration',
             'No Reff', 'Cust Type', 'Cust Name', 'Cust Loc', 'Cust Note',
-            'BIC', 'Branch', 'BNIR Rep', 'P.Agent',
+            'BIC', 'Branch', 'Representative', 'P.Agent',
             'Channel Type', 'Notes', 'Product', 'Note', 'Subject', 'Subject Note',
             'Question', 'Answer', 'Internal Note'
         ];
@@ -563,7 +563,7 @@ const ComplaintList = () => {
         const headers = [
             'No', 'No Ticket', 'Tgl Open', 'Open By', 'Tgl Close', 'Close By', 'Close Update by', 'Duration',
             'No Reff', 'Cust Type', 'Cust Name', 'Cust Loc', 'Cust Note',
-            'BIC', 'Branch', 'BNIR Rep', 'P.Agent',
+            'BIC', 'Branch', 'Representative', 'P.Agent',
             'Channel Type', 'Notes', 'Product', 'Note', 'Subject', 'Subject Note',
             'Question', 'Answer', 'Internal Note'
         ];
@@ -1289,7 +1289,7 @@ const ComplaintList = () => {
 
                                     {(custTypeName.includes('branch') || custReff === 'ref_branch') && (
                                         <div className="form-group">
-                                            <label className="form-label">BNI Branch</label>
+                                            <label className="form-label">Bank Branch</label>
                                             <div className="flex gap-2">
                                                 <select name="idbranch" className="form-select" value={formData.idbranch} onChange={handleFormChange} required>
                                                     <option value="">Select Branch...</option>
@@ -1323,7 +1323,7 @@ const ComplaintList = () => {
 
                                     {(custTypeName.includes('remittance') || custTypeName.includes('rep') || custReff === 'ref_bnir_rep') && (
                                         <div className="form-group">
-                                            <label className="form-label">BNI Remittance Rep</label>
+                                            <label className="form-label">Remittance Representative</label>
                                             <div className="flex gap-2">
                                                 <select name="idbnir_rep" className="form-select" value={formData.idbnir_rep} onChange={handleFormChange} required>
                                                     <option value="">Select Rep...</option>

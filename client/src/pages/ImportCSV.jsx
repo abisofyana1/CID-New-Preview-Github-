@@ -544,7 +544,7 @@ const ImportCSV = () => {
             </div>
 
             <div style={{ padding: '2rem 0', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 500 }}>
-                © {new Date().getFullYear()} BNI Import System &bull; Pastikan data bersih sebelum upload
+                © {new Date().getFullYear()} Trade & Remittance Import System &bull; Pastikan data bersih sebelum upload
             </div>
         </div>
     );

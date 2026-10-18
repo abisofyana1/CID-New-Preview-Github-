@@ -60,8 +60,11 @@ const saveStored = (key, val) => {
     }
 };
 
+const MOCK_VERSION = 'v2_fake_data_sanitized';
+
 export const initMockStorage = (forceReset = false) => {
-    if (forceReset || !localStorage.getItem(STORAGE_KEYS.USERS)) {
+    const currentVer = localStorage.getItem('cid_mock_ver');
+    if (forceReset || currentVer !== MOCK_VERSION) {
         saveStored(STORAGE_KEYS.USERS, MOCK_USERS);
         saveStored(STORAGE_KEYS.COMPLAINTS, MOCK_COMPLAINTS);
         saveStored(STORAGE_KEYS.CHANNELS, MOCK_CHANNELS);
@@ -75,6 +78,7 @@ export const initMockStorage = (forceReset = false) => {
         saveStored(STORAGE_KEYS.USER_LOGS, MOCK_USER_LOGS);
         saveStored(STORAGE_KEYS.APP_LOGS, MOCK_APP_LOGS);
         saveStored(STORAGE_KEYS.DYNAMIC, []);
+        localStorage.setItem('cid_mock_ver', MOCK_VERSION);
     }
 };
 
